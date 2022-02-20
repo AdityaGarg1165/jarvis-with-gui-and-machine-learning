@@ -1,16 +1,19 @@
+import os
+from pathlib import Path
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 import numpy
 import tflearn
 import tensorflow
-import random
 import json
-import pickle
-
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 data = ""
 
-with open("intents.json") as file:
+BASE_DIR = Path(__file__).parent.parent
+
+
+with open(os.path.join(BASE_DIR,"files\intents.json")) as file:
     data = json.load(file)
 
 
@@ -79,7 +82,7 @@ model = tflearn.DNN(net)
 
 def train(epochs):
     model.fit(training, output, n_epoch=epochs, batch_size=8, show_metric=True)
-    model.save("model.pth")
+    model.save(os.path.join(BASE_DIR,"model\model.pth"))
 
 
 def bag_of_words(inp, words):

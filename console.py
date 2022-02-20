@@ -23,7 +23,6 @@ from modules.nueralnetwork import *
 from modules.spechrecognition import *
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent
 
 
@@ -42,7 +41,7 @@ def say(message):
     engine.runAndWait()
 
 
-class Main(QThread):
+class Main():
     def __init__(self):
         super(Main,self).__init__()
 
@@ -52,10 +51,6 @@ class Main(QThread):
             if wake(self.query):
                 self.TaskExecution()
             
-                
-
-
-
     def whishMe(self):
         hour = int(datetime.datetime.now().hour)
         if hour <= 12:
@@ -86,7 +81,14 @@ class Main(QThread):
         while True:
             self.query = input("w:").lower()
             # self.query = self.TakeCommand()
-            
+            results = model.predict([bag_of_words(self.query, words)])
+            results_index = numpy.argmax(results)
+            tag = labels[results_index]
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+                    
+                    say(random.choice(responses))
                 
             if 'open stackoverflow' in self.query:
                 webbrowser.open("www.stackoverflow.com")
@@ -127,6 +129,7 @@ class Main(QThread):
                 os.startfile("C:\\Program Files\\Mozilla Firefox\\firefox.exe")
 
             
+
             elif 'search google' in self.query:
                 self.sq = self.TakeCommand().lower()
                 webbrowser.open(f"{self.sq}")
@@ -137,19 +140,16 @@ class Main(QThread):
                 how_to = pywikihow.search_wikihow(self.search,max_results=1)
                 say(how_to[0].summary)
 
-            elif 'quit' in self.query:
-                app.quit()
-
             elif 'what is' in self.query:
                 quer = self.query
                 quer = quer.split(" ")
                 try:
                     op = quer[3]
-                    if op == "+":
+                    if op == "plus":
                         num1 = int(quer[2])
                         num2 = int(quer[4])
                         say(num1 + num2)
-                    elif op == "-":
+                    elif op == "minus":
                         num1 = int(quer[2])
                         num2 = int(quer[4])
                         say(num1 - num2)
@@ -183,52 +183,7 @@ class Main(QThread):
                 
             elif "None" in self.query:
                 say("")
-            
-            else:
-                results = model.predict([bag_of_words(self.query, words)])
-                results_index = numpy.argmax(results)
-                tag = labels[results_index]
-                for tg in data["intents"]:
-                    if tg['tag'] == tag:
-                        responses = tg['responses']
-                        say(random.choice(responses))
 
-                
-
-
-main_thread = Main()
-
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.ui = Gui()
-        self.ui.setupUi(self)
-        # self.ui.pushButton.clicked.connect(self.start)
-        self.ui.pushButton_2.clicked.connect(self.stop)
-
-    def start(self):
-        self.ui.movie = QMovie(os.path.join(BASE_DIR,"files\\gui.gif"))
-        self.ui.label.setMovie(self.ui.movie)
-        self.ui.movie.start()
-        main_thread.start()
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(self.time)
-        self.timer.start(1000)
-
-    def time(self):
-        self.hour = datetime.datetime.now().hour
-        self.minute = datetime.datetime.now().minute
-        self.second = datetime.datetime.now().second
-        self.ui.label_2.setText(f"{self.hour}:{self.minute}:{self.second}")
-
-    def stop(self):
-        app.quit()
-
-    
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    jarvis = MainWindow()
-    jarvis.show()
-    jarvis.start()
-    sys.exit(app.exec_())
-    
+def st():
+    Main().TaskExecution()
+st()

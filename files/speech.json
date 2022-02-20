@@ -1,0 +1,18 @@
+{
+    "wake":
+    [
+        {
+         "tag":"recognize",
+         "patterns":["wake up jarvis","wake up","hey jarv","wake"],
+         "responses":["Hey Always There for you"]
+        }
+    ],
+    "sleep":
+    [
+        {
+         "tag":"sleep",
+         "patterns":["sleep jarvis","sleep","sleep jarv"],
+         "responses":["Ok, You can call me anytime"]
+        }
+    ]
+}

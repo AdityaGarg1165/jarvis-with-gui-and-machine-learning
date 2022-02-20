@@ -9,7 +9,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import os
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Gui(object):
     def setupUi(self, MainWindow):
@@ -20,13 +23,13 @@ class Gui(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, -120, 981, 801))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("gui.gif"))
+        self.label.setPixmap(QtGui.QPixmap(os.path.join(BASE_DIR,"files/gui.gif")))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(790, 540, 141, 41))
-        self.pushButton.setStyleSheet("background-color:green;")
-        self.pushButton.setObjectName("pushButton")
+        # self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        # self.pushButton.setGeometry(QtCore.QRect(790, 540, 141, 41))
+        # self.pushButton.setStyleSheet("background-color:green;")
+        # self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(790, 580, 141, 41))
         self.pushButton_2.setStyleSheet("background-color:red;")
@@ -43,7 +46,7 @@ class Gui(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Jarvis"))
-        self.pushButton.setText(_translate("MainWindow", "start"))
+        # self.pushButton.setText(_translate("MainWindow", "start"))
         self.pushButton_2.setText(_translate("MainWindow", "stop"))
         self.label_2.setText(_translate("MainWindow", "Date"))
 
