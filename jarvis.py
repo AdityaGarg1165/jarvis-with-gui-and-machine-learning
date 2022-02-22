@@ -49,7 +49,8 @@ class Main(QThread):
 
     def run(self):
         while True:
-            self.query = self.TakeCommand()
+            # self.query = self.TakeCommand()
+            self.query = input("a:").lower()
             if wake(self.query):
                 self.TaskExecution()
             
@@ -86,8 +87,8 @@ class Main(QThread):
     def TaskExecution(self):
         self.whishMe()
         while True:
-            # self.query = input("w:").lower()
-            self.query = self.TakeCommand()
+            self.query = input("w:").lower()
+            # self.query = self.TakeCommand()
             
                 
             if 'open stackoverflow' in self.query:
@@ -193,26 +194,20 @@ class Main(QThread):
 
             elif 'what is' in self.query:
                 quer = self.query
-                quer = quer.split(" ")
                 try:
-                    op = quer[3]
-                    if op == "+":
-                        num1 = int(quer[2])
-                        num2 = int(quer[4])
-                        say(num1 + num2)
-                    elif op == "-":
-                        num1 = int(quer[2])
-                        num2 = int(quer[4])
-                        say(num1 - num2)
-                    elif op == "divide":
-                        num1 = int(quer[2])
-                        num2 = int(quer[4])
-                        say(num1 / num2)
-                    elif op == "multiply":
-                        num1 = int(quer[2])
-                        num2 = int(quer[4])
-                        say(num1 * num2)
-                except:                    
+                    b = []
+                    quer = quer.split("is")
+                    quer.pop(0)
+                    for i in range(len(quer)):
+                        quer = quer[0].split("+")
+                    for iterator in range(len(quer)):
+                        b.append(int(quer[iterator]))
+                    for iter in range(len(quer)):
+                        result = sum(b)
+                    say(result)
+
+                except:
+                    quer = quer.split(" ")          
                     user_said = self.query
                     user_said = user_said.split(" ")
                     result = wikipedia.summary(user_said[2])
@@ -220,16 +215,19 @@ class Main(QThread):
                     say(result)
 
             elif 'who is' in self.query:
-                user_query = self.query
-                user_query = user_query.split(" ")
-                if len(user_query) == 3:
-                    summary = wikipedia.summary(user_query[2],sentences=2)
-                    say("according to wikipedia")
-                    say(summary)
-                elif len(user_query) == 4:
-                    summary = wikipedia.summary(user_query[2] + user_query[3],sentences=2)
-                    say("according to wikipedia")
-                    say(summary)
+                try:
+                    user_query = self.query
+                    user_query = user_query.split(" ")
+                    if len(user_query) == 3:
+                        summary = wikipedia.summary(user_query[2],sentences=2)
+                        say("according to wikipedia")
+                        say(summary)
+                    elif len(user_query) == 4:
+                        summary = wikipedia.summary(user_query[2] + user_query[3],sentences=2)
+                        say("according to wikipedia")
+                        say(summary)
+                except:
+                    pass
 
             elif 'wikipedia' in self.query:
                 search = self.query.replace("wikipedia","")
