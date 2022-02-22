@@ -3,7 +3,7 @@
     [
         {
          "tag":"recognize",
-         "patterns":["wake up jarvis","wake up","hey jarv","wake"],
+         "patterns":["wake up jarvis","wake up","hey jarv","wake","jarvis"],
          "responses":["Hey Always There for you"]
         }
     ],

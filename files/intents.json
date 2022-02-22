@@ -7,7 +7,7 @@
             "responses":["Hello, how are you?","How can i help you sir","Hello sir,Always there for you","Always there for you sir"]
         },
         {
-            "tag":"haal chal",
+            "tag":"how",
             "patterns":["how are you","how about you","how are you doing"],
             "responses":["I am Fine, Thank you","I am Fine sir","Fine , as always"]
         },
@@ -25,6 +25,16 @@
             "tag":"creator",
             "patterns":["who is your creator","who created you"],
             "responses":["Aditya"]
+        },
+        {
+            "tag":"feeling",
+            "patterns":["jarvis feeling","how are you feeling","how are you doing","feeling"],
+            "responses":["i am fine, thank you","i am doing great sir , how about you","fine , as always"]
+        },
+        {
+            "tag":"yo",
+            "patterns":["yo","yo jarvis"],
+            "responses":["yo","yo sir"]
         }
     ]
 }

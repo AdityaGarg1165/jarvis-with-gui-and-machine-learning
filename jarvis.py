@@ -1,10 +1,10 @@
 import json
+from ntpath import join
 import  pyjokes
 import  pyautogui
 import wikipedia
 import random
 import sys
-import PyQt5
 import bs4
 import pywikihow
 import requests
@@ -22,6 +22,7 @@ from modules.gui import Gui
 from modules.nueralnetwork import *
 from modules.spechrecognition import *
 from pathlib import Path
+
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -48,7 +49,7 @@ class Main(QThread):
 
     def run(self):
         while True:
-            self.query = input("a:").lower()
+            self.query = self.TakeCommand()
             if wake(self.query):
                 self.TaskExecution()
             
@@ -75,17 +76,18 @@ class Main(QThread):
             r.pause_threeshold = 1
             audio = r.listen(source)
         try:
-            self.query = r.recognize_google(audio,language="en-in")
+            self.query = r.recognize_google(audio,language="en-in") 
             return self.query.lower()
         except:
             return "None"
 
 
+
     def TaskExecution(self):
         self.whishMe()
         while True:
-            self.query = input("w:").lower()
-            # self.query = self.TakeCommand()
+            # self.query = input("w:").lower()
+            self.query = self.TakeCommand()
             
                 
             if 'open stackoverflow' in self.query:
@@ -93,6 +95,24 @@ class Main(QThread):
 
             elif 'open youtube' in self.query:
                 webbrowser.open("www.youtube.com")
+
+
+            elif 'a joke' in self.query:
+                say(pyjokes.get_joke())
+
+            elif 'guess game' in self.query:
+                randnum = random.randint(0,50)
+                say("guess the number")
+                user_said = self.TakeCommand()
+                try:
+                    if int(user_said) == randnum:
+                        say("you guessed the number correct")
+                    else:
+                        say("you failed to guessed the number")
+                except:
+                    say("please say a number")
+
+
             
             elif sleep(self.query):
                 self.query = "None"
@@ -110,26 +130,45 @@ class Main(QThread):
                         break
                 cv2.destroyAllWindows()
                 cap.release()
-            
-            elif 'whatsapp' in self.query:
-                pywhatkit.sendwhatmsg('+919958450057','hello',2,25)
+        
 
-            elif 'open cmd' in self.query:
-                os.system("cmd")
 
-            elif 'open notepad' == self.query:
-                os.system("notepad")
+            elif 'open' in self.query:
+                try:
+                    user_query = self.query
+                    user_query = user_query.split(" ")
+                    if 'firefox' == user_query[1]:
+                        os.startfile("C:\\Program Files\\Mozilla Firefox\\firefox.exe")
+                    
+                    if 'vscode' in self.query:
+                        os.startfile("C:\\Users\\pc\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
 
-            elif 'open vscode' in self.query:
-                os.system("code")
+                    if 'notepad' in self.query:
+                        os.system("notepad")
+                    if 'skype' in self.query:
+                        os.system("skype")
+                    
+                    if 'chrome' == user_query[1]:
+                        os.startfile("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe")
+                    else:
+                        webbrowser.open(user_said[1])
 
-            elif 'open firefox' in self.query:
-                os.startfile("C:\\Program Files\\Mozilla Firefox\\firefox.exe")
+                except:
+                    say("sir please specify an program")
+                
 
             
             elif 'search google' in self.query:
                 self.sq = self.TakeCommand().lower()
                 webbrowser.open(f"{self.sq}")
+
+            elif 'wikipedia' in self.query:
+                user_query = self.query
+                user_query = user_query.replace("wikipedia",'')
+                user_query = user_query.replace("search",'')
+                summary = wikipedia.summary(user_query,sentences=2)
+                say("according to wikipedia")
+                say(summary)
 
             elif 'how to do mode' in self.query:
                 self.search = self.TakeCommand().lower()
@@ -139,6 +178,18 @@ class Main(QThread):
 
             elif 'quit' in self.query:
                 app.quit()
+
+            elif 'what is the time' in self.query:
+                say("sir the time is")
+                say(f"{datetime.datetime.now().hour - 12}")
+                say(f"{datetime.datetime.now().minute}")
+
+
+            elif 'the date' in self.query:
+                say(datetime.datetime.now().date)
+
+            elif 'the day' in self.query:
+                say(f"the date is{datetime.datetime.now().day}")
 
             elif 'what is' in self.query:
                 quer = self.query
@@ -167,6 +218,19 @@ class Main(QThread):
                     result = wikipedia.summary(user_said[2])
                     say("according to wikipedia")
                     say(result)
+
+            elif 'who is' in self.query:
+                user_query = self.query
+                user_query = user_query.split(" ")
+                if len(user_query) == 3:
+                    summary = wikipedia.summary(user_query[2],sentences=2)
+                    say("according to wikipedia")
+                    say(summary)
+                elif len(user_query) == 4:
+                    summary = wikipedia.summary(user_query[2] + user_query[3],sentences=2)
+                    say("according to wikipedia")
+                    say(summary)
+
             elif 'wikipedia' in self.query:
                 search = self.query.replace("wikipedia","")
                 say(wikipedia.summary(search))
@@ -178,8 +242,33 @@ class Main(QThread):
                 print(tomato_soup.find('div',class_="_30jeq3 _16Jk6d").get_text())
                 say(tomato_soup.find('div',class_="_30jeq3 _16Jk6d").get_text())
             
+            elif 'who am i' in self.query:
+                if not name == None:
+                    say(f"Your name is {name}")
+                else:
+                    say("Sorry but i didnt recognize you")
+            
+
+            elif 'remember my name' in self.query:
+                say("sir please tell your name")
+                user_query = self.TakeCommand()
+                with open(os.path.join(BASE_DIR,"files/name.txt")) as f:
+                    f.write(user_said)
+                    say("ok i will remember your name")
+
+            
+            
             elif 'set alarm' in self.query:
-                import modules.alarm 
+                import modules.alarm
+
+            elif 'rock paper' in self.query:
+                randnum = random.randint(1,3)
+                if randnum == 1:
+                    say("scissors")
+                if randnum == 2:
+                    say("paper")
+                if randnum == 3:
+                    say("rock")
                 
             elif "None" in self.query:
                 say("")
@@ -203,13 +292,17 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.ui = Gui()
         self.ui.setupUi(self)
-        # self.ui.pushButton.clicked.connect(self.start)
         self.ui.pushButton_2.clicked.connect(self.stop)
 
+    def changeoutput(self,text):
+        self.ui.out.setText(text)
     def start(self):
         self.ui.movie = QMovie(os.path.join(BASE_DIR,"files\\gui.gif"))
+        self.ui.movie2 = QMovie(os.path.join(BASE_DIR,"files\\earth.gif"))
         self.ui.label.setMovie(self.ui.movie)
+        self.ui.earthgif.setMovie(self.ui.movie2)
         self.ui.movie.start()
+        self.ui.movie2.start()
         main_thread.start()
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.time)
