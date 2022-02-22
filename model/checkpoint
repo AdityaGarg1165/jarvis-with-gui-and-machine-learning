@@ -1,0 +1,2 @@
+model_checkpoint_path: "c:\\Users\\pc\\Documents\\python\\JARVIS\\model\\model.pth"
+all_model_checkpoint_paths: "c:\\Users\\pc\\Documents\\python\\JARVIS\\model\\model.pth"

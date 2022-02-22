@@ -81,6 +81,38 @@
      <string>Date</string>
     </property>
    </widget>
+   <widget class="QLabel" name="earthgif">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>300</y>
+      <width>271</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../Downloads/Earth_Template.gif</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="out">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>590</y>
+      <width>611</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
