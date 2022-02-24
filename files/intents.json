@@ -23,13 +23,18 @@
         },
         {
             "tag":"creator",
-            "patterns":["who is your creator","who created you"],
+            "patterns":["who is your creator","who created you","creator"],
             "responses":["Aditya"]
         },
         {
             "tag":"feeling",
             "patterns":["jarvis feeling","how are you feeling","how are you doing","feeling"],
             "responses":["i am fine, thank you","i am doing great sir , how about you","fine , as always"]
+        },
+        {
+            "tag":"yo",
+            "patterns":["yo","yo jarvis"],
+            "responses":["yo","yo sir"]
         },
         {
             "tag":"yo",

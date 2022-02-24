@@ -267,6 +267,9 @@ class Main(QThread):
                     say("paper")
                 if randnum == 3:
                     say("rock")
+
+            elif 'snake game':
+                os.startfile(os.path.join(BASE_DIR,"files\snake.exe"))
                 
             elif "None" in self.query:
                 say("")
