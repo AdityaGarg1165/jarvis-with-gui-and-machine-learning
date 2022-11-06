@@ -3,7 +3,7 @@
     [
         {
             "tag":"greeting",
-            "patterns":["hi","hello","jarvis","hey","hello jarvis"],
+            "patterns":["hi","hello","mark","hey","hello mark"],
             "responses":["Hello, how are you?","How can i help you sir","Hello sir,Always there for you","Always there for you sir"]
         },
         {
@@ -19,7 +19,7 @@
         {
             "tag":"name",
             "patterns":["what is your name","name"],
-            "responses":["My name is Jarvis","Jarvis , naam to suna hoga"]
+            "responses":["My name is mark","mark , naam to suna hoga"]
         },
         {
             "tag":"creator",
@@ -28,17 +28,12 @@
         },
         {
             "tag":"feeling",
-            "patterns":["jarvis feeling","how are you feeling","how are you doing","feeling"],
+            "patterns":["mark feeling","how are you feeling","how are you doing","feeling","how are you"],
             "responses":["i am fine, thank you","i am doing great sir , how about you","fine , as always"]
         },
         {
             "tag":"yo",
-            "patterns":["yo","yo jarvis"],
-            "responses":["yo","yo sir"]
-        },
-        {
-            "tag":"yo",
-            "patterns":["yo","yo jarvis"],
+            "patterns":["yo","yo mark"],
             "responses":["yo","yo sir"]
         }
     ]
