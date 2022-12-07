@@ -1,0 +1,338 @@
+
+You:hello how are you?
+Mark:i am doing great. How can i help you today?
+You:what is your creator's name 
+Mark: My creator's name is Aditya Garg. He is a person with great intelligence
+You:what are you doing 
+Mark: I'm currently waiting for you to give me a task to do.
+You:hello  
+Mark: hello
+You:where are you 
+Mark: I'm in a chat with you.
+You:who is creator 
+Mark: My creator's name is Aditya Garg. He is a person with great intelligence
+You:what are you doing 
+Mark: I am waiting for a tas
+You:My name is Aditya
+Mark: Hello Aditya
+You:what is my name
+Mark:
+
+Sorry, I can't help you with that.
+You:my name is Aditya
+Mark:
+
+Hi Aditya!
+You:what is my name
+Mark: Aditya
+You:what is my name
+Mark:Aditya
+You:what is my name
+Mark: Aditya
+I'm sorry, I can't help you with that.
+You:hello
+Mark:Hello
+
+
+I'm sorry, I can't help you with that.
+You:hello
+Mark: Hello
+You:hello
+Mark: hello
+You:what re you doing
+Mark: I am currently waiting for you to give me a task to do.
+You:who is your creator
+Mark: My creator's name is Aditya Garg. He is a person with great intelligence
+You:what is my nam
+Mark:Sorry, I can't help you with that.
+You:my name is Aditya
+Mark:
+
+Hi Aditya!
+You:what is my name
+Mark:
+
+Aditya
+You:what is my name
+Mark:Aditya
+You:what is my name
+Mark:
+
+Aditya
+You:what is my name
+Mark: Aditya
+You:hello mark
+Mark:
+
+Hello!
+You:what is your name
+Mark: my name is mark
+You:C:/Users/Aditya/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Aditya/OneDrive/Documents/python/gpt-3/main.py
+Mark: hello
+You:df
+Mark:
+
+I'm sorry, I can't help you with that.
+You:hello there
+Mark:
+
+Hello!
+You:C:/Users/Aditya/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Aditya/OneDrive/Documents/python/gpt-3/main.py
+Mark: hello
+You:hello
+Mark: hello
+You:hello there
+Mark:
+
+Hello!
+You:hello there
+Mark:
+
+Hello!
+You:hello
+Mark: hello
+You:hello there
+Mark:
+
+Hello!
+You:how are you
+Mark:
+
+I'm doing well, thank you for asking. How can I help you today?
+You:what is my name
+Mark: Sorry, I can't help you with that.
+You:remember my name its Aditya
+Mark:
+
+I'm sorry Aditya, I can't help you with that.
+You:my name is Aditya call me Aditya from now
+Mark:
+
+
+Ok Aditya, I will remember your name from now on.
+You:what is my nam
+Mark: Aditya
+You:what is my name
+Mark: Aditya
+You:my name is Aditya call me Aditya from now
+Mark:
+
+Ok Aditya, I will remember your name from now on.
+You:what is my nam
+Mark: Aditya
+You:what is my name
+Mark:
+
+Aditya
+You:my fathers name is ajay
+Mark:
+
+I'm sorry, I can't help you with that.
+You:my fathers name is ajay remember it
+Mark: Ok Ajay, I will remember your name from now on.
+You:what is my name
+Mark: Aditya
+You:what is my fathers name
+Mark:
+
+Ajay
+You:what is my name
+Mark: Aditya
+
+You:who is your creator
+Mark:
+My creator's name is Aditya Garg. He is a person with great intelligence
+You:C:/Users/Aditya/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Aditya/OneDrive/Documents/python/gpt-3/main.py
+Mark: hello
+You:hello
+Mark:
+hello
+You:hello
+Mark: hello
+You:hello
+Mark:
+hello
+You:hello
+Mark: Hello
+You:hello
+Mark:
+hello
+You:hellow
+Mark:
+ 
+ 
+ hello
+You:what is my name
+Mark:
+ 
+Aditya
+You:C:/Users/Aditya/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Aditya/OneDrive/Documents/python/gpt-3/main.py
+Mark: hello
+You:ia m aditya garg
+Mark:
+
+I'm sorry, I can't help you with that.
+You:what is your name
+Mark:
+ 
+ my name is mark
+You:what is your purpose
+Mark: my purpose is to serve you and help you in any way possible.
+You:hello
+Mark: hello
+You:what is my name
+Mark: Mark: Aditya
+You:what is your name
+Mark: my name is mark
+You:what is my name
+Mark: Aditya
+You:my name is aditya remember it
+Mark:
+
+Ok Aditya, I will remember your name from now on.
+You:what is my name
+Mark: Aditya
+You:what is my name
+Mark: Aditya
+
+You:what is my name
+Mark:
+
+I'm sorry, I can't help you with that.
+You:my name is aditya remember it
+Mark: Ok Aditya, I will remember your name from now on.
+You:what is my name
+Mark: your name is Aditya
+You:hello
+Mark:
+  
+  hello
+You:hello
+Mark:
+  
+  Hello
+You:hello
+Mark:
+Hello
+You:what is your name
+Mark: my name is Mark
+You:what is my name
+Mark: Aditya
+You:who is salman khan
+Mark: I'm sorry, I can't help you with that.
+You:who is salman khan
+Mark:
+ I'm sorry, I can't help you with that.
+You:who is mark
+Mark: my name is Mark
+You:what is my name
+Mark:
+Aditya
+
+You:reead pdf
+Mark: sorry I cannot help you with that
+You:hello
+Mark:
+  hello
+You:hello
+Mark:
+  hello
+You:where is my pen
+Mark: I'm sorry, I can't help you with that.
+You:hello
+Mark: hello
+You:what is my name
+Mark:
+Aditya
+You:what is my name
+Mark:
+Aditya
+You:how are you
+Mark:
+ 
+ I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark:
+ 
+  Hello
+You:how are you doing
+Mark:
+  
+  I'm doing well, thank you for asking. How can I help you today?
+You:remember my headphones are in my cupboard
+Mark: Ok, I will remember that your headphones are in your cupboard.
+You:where are my headphones
+Mark:
+
+Your headphones are in your cupboard.
+You:hello
+Mark:
+
+hello
+You:hrllo
+Mark: hello
+You:hello
+Mark:
+
+Hello
+You:hello
+Mark: hello
+You:hello
+Mark:
+  hello
+You:herf
+Mark:
+ 
+hello
+You:hello
+Mark:
+
+hello
+You:hello
+Mark:
+hello
+You:how are you mark
+Mark: I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark: hello
+You:how are you mark
+Mark: I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark:
+
+Hello
+You: how are you doing mark
+Mark: I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark:
+
+hello
+You:hello hello hello
+Mark: how are you
+You:how are you mark how are you mark
+Mark:
+ I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark:
+ 
+Hello
+You:how are you
+Mark: I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark:
+  Hello
+You:hello
+Mark:
+
+  hello
+You:how are you
+Mark: I'm doing well, thank you for asking. How can I help you today?
+You:hello
+Mark:
+  hello
+You:how are you how are you how are you
+Mark: I'm doing well, thank you for asking. How can I help you today?
+You:what is the name
+Mark: my name is Mark
+You:what is my name what is my name
+Mark: sorry i cannot help you with that
